@@ -21,3 +21,47 @@ int main() {
         cout << "4. Exit\n";
         cout << "Enter your choice: ";
         cin >> choice;
+
+        switch (choice) {
+
+            case 1:
+                if (count >= MAX_STUDENTS) {
+                    cout << "Student limit reached.\n";
+                    break;
+                }
+
+                cout << "\nEnter Student ID: ";
+                cin >> studentID[count];
+
+                cin.ignore();
+
+                cout << "Enter Student Name: ";
+                getline(cin, studentName[count]);
+
+                cout << "Enter Student Age: ";
+                cin >> studentAge[count];
+
+                cout << "Enter Student Marks: ";
+                cin >> studentMarks[count];
+
+                count++;
+
+                cout << "Student added successfully!\n";
+                break;
+            case 2:
+                if (count == 0) {
+                    cout << "\nNo students available.\n";
+                }
+                else {
+                    cout << "\n===== Student Details =====\n";
+
+                for (int i = 0; i < count; i++) {
+                    cout << "\nStudent " << i + 1 << endl;
+                    cout << "ID: " << studentID[i] << endl;
+                    cout << "Name: " << studentName[i] << endl;
+                    cout << "Age: " << studentAge[i] << endl;
+                    cout << "Marks: " << studentMarks[i] << endl;
+                  }
+              }
+              break;
+
