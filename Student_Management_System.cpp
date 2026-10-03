@@ -64,4 +64,45 @@ int main() {
                   }
               }
               break;
+            case 3: {
+                int searchID;
+                bool found = false;
 
+                cout << "\nEnter Student ID to search: ";
+                cin >> searchID;
+
+                for (int i = 0; i < count; i++) {
+
+                    if (studentID[i] == searchID) {
+                        cout << "\nStudent found!\n";
+                        cout << "ID: " << studentID[i] << endl;
+                        cout << "Name: " << studentName[i] << endl;
+                        cout << "Age: " << studentAge[i] << endl;
+                        cout << "Marks: " << studentMarks[i] << endl;
+
+                        found = true;
+                        break;
+                    }
+                }
+
+                if (!found) {
+                    cout << "Student not found.\n";
+                }
+
+                break;
+            }
+
+
+            case 4:
+                cout << "\nProgram exited.\n";
+                break;
+
+
+            default:
+                cout << "\nInvalid choice. Try again.\n";
+        }
+
+    } while (choice != 4);
+
+    return 0;
+}
