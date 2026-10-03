@@ -48,6 +48,8 @@ int main() {
 
                 cout << "Student added successfully!\n";
                 break;
+
+
             case 2:
                 if (count == 0) {
                     cout << "\nNo students available.\n";
@@ -55,15 +57,17 @@ int main() {
                 else {
                     cout << "\n===== Student Details =====\n";
 
-                for (int i = 0; i < count; i++) {
-                    cout << "\nStudent " << i + 1 << endl;
-                    cout << "ID: " << studentID[i] << endl;
-                    cout << "Name: " << studentName[i] << endl;
-                    cout << "Age: " << studentAge[i] << endl;
-                    cout << "Marks: " << studentMarks[i] << endl;
-                  }
-              }
-              break;
+                    for (int i = 0; i < count; i++) {
+                        cout << "\nStudent " << i + 1 << endl;
+                        cout << "ID: " << studentID[i] << endl;
+                        cout << "Name: " << studentName[i] << endl;
+                        cout << "Age: " << studentAge[i] << endl;
+                        cout << "Marks: " << studentMarks[i] << endl;
+                    }
+                }
+                break;
+
+
             case 3: {
                 int searchID;
                 bool found = false;
